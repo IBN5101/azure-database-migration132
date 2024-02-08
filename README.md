@@ -29,6 +29,9 @@ This project is part of the Ai■■■■ skill bootcamp.
 - The initial project setup was very simple and smooth. I definitely spent more efforts into personlizing the brand-new VM. As for SQL server and SSMS, the installation process took longer than expected.
 - The production database restoration ran into a problem: I was unable to select the destination folder inside my user's Desktop. Workaround: placing the project folder directly on `C:\` folder.
 - Setting up and connecting to the Azure SQL Database was easy. Schema migration and Data migration took significantly longer than I had expected.
+- The backup process was rather meticulious but once you understand the process, it becomes much easier. The backup files are uploaded to Azure Storage for secure & online storage.
+- One of the task was to create a separate VM for sandbox testing and to recover the database in this sandbox. After downloading the file from Azure Storage, it took only a few clicks to have the entire system fully replicated.
+- A maintenance plan is also in place to fully backup the database every week, for a limited time.
 
 ## License
 
