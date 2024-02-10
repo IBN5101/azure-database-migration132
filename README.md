@@ -34,7 +34,8 @@ This project is part of the Ai■■■■ skill bootcamp.
 - A maintenance plan is also in place to fully backup the database every week, for a limited time.
 - As for the Data Loss Simulation, the approach was to pick a random table and delete the top 1000 rows. This turned out to be the wrong approach because the product database is meticulously setup with many restrictions. For example: deleting records from `Person.Person` is not allowed due to REFERENCE constraint with `HumanResources.Employee`.
 - After trials and errors, I successfully deleted the first 1000 records of the table `Production.WorkOrderRouting`. I confirmed the deletion by checking that the first ID of the table was 1339, while an unmodified backup showed the first ID of the table was 13.
-- I restored the database on Azure and connected to it using Azure Data Studio. I noted that by selecting the target database while on the connection screen, it would fill in the necessary credentials to the Azure server and I only needed to change to the restored database. 
+- I restored the database on Azure and connected to it using Azure Data Studio. I noted that by selecting the target database while on the connection screen, it would fill in the necessary credentials to the Azure server and I only needed to change to the restored database.
+- I setup Geo Replication using Azure and picked the secondary region to be halfway across the world. Since this is a learning project, there are no observable consequences. However, I question whether it is better to have Geo Replication in a closer region to the primary server. Test failover and tailback were also simple procedures.
 
 ## License
 
