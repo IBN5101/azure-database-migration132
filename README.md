@@ -32,6 +32,9 @@ This project is part of the Ai■■■■ skill bootcamp.
 - The backup process was rather meticulious but once you understand the process, it becomes much easier. The backup files are uploaded to Azure Storage for secure & online storage.
 - One of the task was to create a separate VM for sandbox testing and to recover the database in this sandbox. After downloading the file from Azure Storage, it took only a few clicks to have the entire system fully replicated.
 - A maintenance plan is also in place to fully backup the database every week, for a limited time.
+- As for the Data Loss Simulation, the approach was to pick a random table and delete the top 1000 rows. This turned out to be the wrong approach because the product database is meticulously setup with many restrictions. For example: deleting records from `Person.Person` is not allowed due to REFERENCE constraint with `HumanResources.Employee`.
+- After trials and errors, I successfully deleted the first 1000 records of the table `Production.WorkOrderRouting`. I confirmed the deletion by checking that the first ID of the table was 1339, while an unmodified backup showed the first ID of the table was 13.
+- I restored the database on Azure and connected to it using Azure Data Studio. I noted that by selecting the target database while on the connection screen, it would fill in the necessary credentials to the Azure server and I only needed to change to the restored database. 
 
 ## License
 
