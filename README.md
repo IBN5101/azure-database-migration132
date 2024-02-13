@@ -12,18 +12,6 @@ Project prompt:
 
 This project is part of the Ai■■■■ skill bootcamp.
 
-## Installation
-
-(TBD)
-
-## Usage
-
-(TBD)
-
-## File structure
-
-(TBD)
-
 ## Comments
 
 - The initial project setup was very simple and smooth. I definitely spent more efforts into personlizing the brand-new VM. As for SQL server and SSMS, the installation process took longer than expected.
@@ -36,6 +24,13 @@ This project is part of the Ai■■■■ skill bootcamp.
 - After trials and errors, I successfully deleted the first 1000 records of the table `Production.WorkOrderRouting`. I confirmed the deletion by checking that the first ID of the table was 1339, while an unmodified backup showed the first ID of the table was 13.
 - I restored the database on Azure and connected to it using Azure Data Studio. I noted that by selecting the target database while on the connection screen, it would fill in the necessary credentials to the Azure server and I only needed to change to the restored database.
 - I setup Geo Replication using Azure and picked the secondary region to be halfway across the world. Since this is a learning project, there are no observable consequences. However, I question whether it is better to have Geo Replication in a closer region to the primary server. Test failover and tailback were also simple procedures.
+- Then, I integrated Microsoft Entra ID to the database and adding my Azure account as the SQL server admin. A temporary Entra user was created and given the DB reader role in the SQL server. Finally, I used that user to connect to the SQL and confirmed that only read is permitted.
+
+## Diagram
+
+Diagram of the entire project journey, using Lucid charts.
+
+![project diagram](Azure%20migration%20project%20diagram.png)
 
 ## License
 
