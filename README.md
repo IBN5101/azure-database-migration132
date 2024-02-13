@@ -10,7 +10,7 @@ Project prompt:
 >
 > To enhance security, Microsoft Entra ID integration will be employed to define access roles, adding an extra layer of control and protection
 
-This project is part of the Ai■■■■ skill bootcamp.
+This project is part of the AiCore skill bootcamp.
 
 ## Comments
 
@@ -31,7 +31,3 @@ This project is part of the Ai■■■■ skill bootcamp.
 Diagram of the entire project journey, using Lucid charts.
 
 ![project diagram](Azure%20migration%20project%20diagram.png)
-
-## License
-
-Licensed under the [MIT](LICENSE.txt) license.
